@@ -28,6 +28,14 @@ function App() {
 }
 
 function Sidebar({ open, onClose }) {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      onClose(); // Close sidebar after clicking on mobile
+    }
+  };
+
   return (
     <aside className={`sidebar${open ? " open" : ""}`}>
       <div className="sidebar-title">
@@ -36,28 +44,28 @@ function Sidebar({ open, onClose }) {
       </div>
       <nav>
         <ul>
-          <li className="active"><i className="icon"></i> Introduction</li>
-          <li><i className="icon"></i> Purpose</li>
-          <li><i className="icon"></i> Definitions</li>
-          <li><i className="icon"></i> Key Commitments</li>
-          <li><i className="icon"></i> Fair Practice Guidelines for NBFCs</li>
-          <li className="sub-list">a. Loan Applications and Their Processing</li>
-          <li className="sub-list">b. Loan Appraisal and Terms/Conditions</li>
-          <li className="sub-list">c. Loan Disbursement and Changes in Terms</li>
-          <li className="sub-list">d. Post-disbursement Monitoring</li>
-          <li className="sub-list">e. General Provisions</li>
-          <li className="sub-list">f. Confidentiality of Information</li>
-          <li className="sub-list">g. Language and Communication</li>
-          <li className="sub-list">h. Regulation of Interest Rate</li>
-          <li><i className="icon"></i> Penal Charges</li>
-          <li><i className="icon"></i> Fair Practice Code for Microfinance Loan</li>
-          <li className="sub-list">a. General</li>
-          <li className="sub-list">b. Non-coercive methods of recovery</li>
-          <li><i className="icon"></i> Responsibility of The Board</li>
-          <li><i className="icon"></i> Grievance Redressal Mechanism</li>
-          <li><i className="icon"></i> Review of the Policy</li>
-          <li><i className="icon"></i> Force Majeure</li>
-          <li><i className="icon"></i> Disclaimer</li>
+          <li onClick={() => scrollToSection('introduction')}><i className="icon"></i> Introduction</li>
+          <li onClick={() => scrollToSection('purpose')}><i className="icon"></i> Purpose</li>
+          <li onClick={() => scrollToSection('definitions')}><i className="icon"></i> Definitions</li>
+          <li onClick={() => scrollToSection('key-commitments')}><i className="icon"></i> Key Commitments</li>
+          <li onClick={() => scrollToSection('fair-practice')}><i className="icon"></i> Fair Practice Guidelines for NBFCs</li>
+          <li className="sub-list" onClick={() => scrollToSection('loan-applications')}>a. Loan Applications and Their Processing</li>
+          <li className="sub-list" onClick={() => scrollToSection('loan-appraisal')}>b. Loan Appraisal and Terms/Conditions</li>
+          <li className="sub-list" onClick={() => scrollToSection('loan-disbursement')}>c. Loan Disbursement and Changes in Terms</li>
+          <li className="sub-list" onClick={() => scrollToSection('post-disbursement')}>d. Post-disbursement Monitoring</li>
+          <li className="sub-list" onClick={() => scrollToSection('general-provisions')}>e. General Provisions</li>
+          <li className="sub-list" onClick={() => scrollToSection('confidentiality')}>f. Confidentiality of Information</li>
+          <li className="sub-list" onClick={() => scrollToSection('language-communication')}>g. Language and Communication</li>
+          <li className="sub-list" onClick={() => scrollToSection('regulation-interest')}>h. Regulation of Interest Rate</li>
+          <li onClick={() => scrollToSection('penal-charges')}><i className="icon"></i> Penal Charges</li>
+          <li onClick={() => scrollToSection('microfinance')}><i className="icon"></i> Fair Practice Code for Microfinance Loan</li>
+          <li className="sub-list" onClick={() => scrollToSection('microfinance-general')}>a. General</li>
+          <li className="sub-list" onClick={() => scrollToSection('non-coercive')}>b. Non-coercive methods of recovery</li>
+          <li onClick={() => scrollToSection('responsibility')}><i className="icon"></i> Responsibility of The Board</li>
+          <li onClick={() => scrollToSection('grievance')}><i className="icon"></i> Grievance Redressal Mechanism</li>
+          <li onClick={() => scrollToSection('review')}><i className="icon"></i> Review of the Policy</li>
+          <li onClick={() => scrollToSection('force-majeure')}><i className="icon"></i> Force Majeure</li>
+          <li onClick={() => scrollToSection('disclaimer')}><i className="icon"></i> Disclaimer</li>
         </ul>
       </nav>
     </aside>
@@ -640,33 +648,33 @@ function MainContent() {
         alt="Handshake"
         className="main-image full-width-image"
       />
-      <div className="section">
+      <div id="introduction" className="section">
         <div className="section-title">INTRODUCTION</div>
         <p>
-          Agrim Fincap Private Limited (“Agrim” or “the Company”) is a Non-Banking Financial Company (NBFC), registered with the Reserve Bank of India (RBI) as a non-deposit taking, non-systemically important NBFC. The Company is primarily engaged in providing personal loans, MSME finance, and other financial services.
+          Agrim Fincap Private Limited ("Agrim" or "the Company") is a Non-Banking Financial Company (NBFC), registered with the Reserve Bank of India (RBI) as a non-deposit taking, non-systemically important NBFC. The Company is primarily engaged in providing personal loans, MSME finance, and other financial services.
         </p>
         <p>
           In line with the RBI guidelines on the Fair Practices Code for NBFCs, Agrim has adopted this Board-approved policy, which outlines transparent practices to be followed while dealing with customers. This Code is designed to foster confidence, promote ethical conduct, and ensure fairness in all customer interactions.
         </p>
       </div>
-      <PurposeSection />
-      <DefinitionsSection />
-      <KeyCommitmentsSection />
-      <FairPracticeGuidelinesSection />
-      <LoanAppraisalSection />
-      <LoanDisbursementSection />
-      <PostDisbursementMonitoringSection />
-      <GeneralProvisionsSection />
-      <ConfidentialitySection />
-      <LanguageCommunicationSection />
-      <RegulationOfInterestRatesSection />
-      <PenalChargesSection />
-      <MicrofinanceLoansSection />
-      <NonCoerciveRecoverySection />
-      <GrievanceRedressalSection />
-      <ForceMajeureSection />
-      <ReviewSection />
-      <DisclaimerSection />
+      <div id="purpose"><PurposeSection /></div>
+      <div id="definitions"><DefinitionsSection /></div>
+      <div id="key-commitments"><KeyCommitmentsSection /></div>
+      <div id="fair-practice"><FairPracticeGuidelinesSection /></div>
+      <div id="loan-appraisal"><LoanAppraisalSection /></div>
+      <div id="loan-disbursement"><LoanDisbursementSection /></div>
+      <div id="post-disbursement"><PostDisbursementMonitoringSection /></div>
+      <div id="general-provisions"><GeneralProvisionsSection /></div>
+      <div id="confidentiality"><ConfidentialitySection /></div>
+      <div id="language-communication"><LanguageCommunicationSection /></div>
+      <div id="regulation-interest"><RegulationOfInterestRatesSection /></div>
+      <div id="penal-charges"><PenalChargesSection /></div>
+      <div id="microfinance"><MicrofinanceLoansSection /></div>
+      <div id="non-coercive"><NonCoerciveRecoverySection /></div>
+      <div id="grievance"><GrievanceRedressalSection /></div>
+      <div id="force-majeure"><ForceMajeureSection /></div>
+      <div id="review"><ReviewSection /></div>
+      <div id="disclaimer"><DisclaimerSection /></div>
     </main>
   );
 }
