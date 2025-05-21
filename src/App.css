@@ -1370,10 +1370,9 @@ body {
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
 
-.noncoercive-ribbon img {
-  width: 40px;
-  height: 40px;
-}
+/* .noncoercive-ribbon img {
+  display: none;
+} */
 
 .noncoercive-text {
   font-size: 1.15rem;
