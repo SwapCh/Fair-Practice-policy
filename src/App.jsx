@@ -586,11 +586,11 @@ function NonCoerciveRecoverySection() {
         ))}
       </div> */}  
       <div className="non-coercive-image-container">
-        <img src={"non coercive 1.png"} alt="non-coercive-image" className="non-coercive-image" />
+        <img src={"non_coercive_1.png"} alt="non-coercive-image" className="non-coercive-image" />
       </div>
 
       <div className="non-coercive-image-container">
-        <img src={"non coercive 2.png"} alt="non-coercive-image" />
+        <img src={"non_coercive_2.png"} alt="non-coercive-image" />
       </div>
 
       <div className="non-coercive-image2-container">
