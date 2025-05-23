@@ -196,7 +196,7 @@ function KeyCommitmentsSection() {
 function CommitImage() {
   return (
     <div className="commit-image-container">
-      <img src={"key commitments.png"} alt="Commitment handshake" />
+      <img src={"key_commitments.png"} alt="Commitment handshake" />
     </div>
   );
 }
