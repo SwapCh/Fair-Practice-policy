@@ -66,3 +66,98 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+.commit-image-container img {
+  width: 100%;      /* Make sure it doesn't overflow the container */
+  /*height: auto;         /* Keep aspect ratio */
+  height: 450px;    /* Adjust this value to control height */
+  display: block;
+
+  margin: auto;    /* Center and give vertical spacing */
+  object-fit: contain;  /* Ensures image scales nicely */
+}
+
+.regulation-image-container img {
+  width: 100%;      /* Make sure it doesn't overflow the container */
+  /*height: auto;         /* Keep aspect ratio */
+  height: 450px;    /* Adjust this value to control height */
+  display: block;
+
+  margin: auto;    /* Center and give vertical spacing */
+  object-fit: contain;  /* Ensures image scales nicely */
+}
+
+.non-coercive-image2-container img {
+  margin-top: 100px;
+}
+
+.guidelines-image-container img{
+  width: 100%;      /* Make sure it doesn't overflow the container */
+  /*height: auto;         /* Keep aspect ratio */
+  height: 450px;    /* Adjust this value to control height */
+  display: block;
+
+  margin: auto;    /* Center and give vertical spacing */
+  object-fit: contain;
+}
+
+@media( max-width: 800px){
+.non-coercive-image-container {
+    margin: 0 auto 8px auto;  /* Bottom spacing between images */
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .non-coercive-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .microfinance-image-container{
+  margin: 0 auto 8px auto;  /* Bottom spacing between images */
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .microfinance-image-container img{
+  max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .non-coercive-image2-container img {
+  /* margin-top: 100px; */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0 0 0 auto;
+    object-fit: contain;
+}
+
+  .guidelines-img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0 0 0 auto;
+    object-fit: contain;
+  }
+
+  .guidelines-image-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0 0 0 auto;
+    object-fit: contain;
+  }
+}
+
+  

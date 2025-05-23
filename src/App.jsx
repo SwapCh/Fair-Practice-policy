@@ -191,11 +191,23 @@ function KeyCommitmentsSection() {
   );
 }
 
+
+
+function CommitImage() {
+  return (
+    <div className="commit-image-container">
+      <img src={"key commitments.png"} alt="Commitment handshake" />
+    </div>
+  );
+}
+
+
+
 function FairPracticeGuidelinesSection() {
   return (
     <section className="fpg-section">
       <div className="fpg-title">FAIR PRACTICE GUIDELINES FOR NBFCs</div>
-      <div className="fpg-diagram">
+       {/* <div className="fpg-diagram">
         <div className="fpg-bubble fpg-orange">
           Comprehensive application forms with fee details, refundability, pre-payment options, and other relevant borrower information.
         </div>
@@ -210,8 +222,13 @@ function FairPracticeGuidelinesSection() {
         </div>
         <div className="fpg-bubble fpg-blue-bottom">
           Written communication of rejection reasons for loan applications up to ₹2 lakhs within the stipulated time.
-        </div>
+        </div> 
+      </div> */}
+       <div className="guidelines-image-container"> {/*"originally eta comit-image-container chilo" */}
+      <img src={"guidelines.png"} alt="Commitment handshake" className="guidelines-img" />
       </div>
+      
+
     </section>
   );
 }
@@ -429,17 +446,21 @@ function LanguageCommunicationSection() {
 function RegulationOfInterestRatesSection() {
   return (
     <section className="regulation-interest-section">
-      <div className="regulation-interest-img-col">
+      {/* <div className="regulation-interest-img-col">
         <img src={regulationInterestImg} alt="Regulation of Interest Rates" className="regulation-interest-img" />
-      </div>
-      <div className="regulation-interest-content">
+      </div> */}
+      {/* <div className="regulation-interest-content">
         <div className="regulation-interest-title">Regulation of Interest Rates</div>
         <ul className="regulation-interest-list">
           <li>Interest rates will be determined by the Board based on cost of funds, risk premium, Opex, and market trends</li>
           <li>The Company maintains a separate Interest Rate Policy.</li>
           <li>All rates communicated will be in annualised terms to ensure transparency.</li>
         </ul>
-        <div className="regulation-interest-divider"></div>
+        <div className="regulation-interest-divider"></div> 
+      </div>*/}
+
+      <div className="regulation-image-container">
+      <img src={"8.png"} alt="Commitment handshake" />
       </div>
     </section>
   );
@@ -513,7 +534,7 @@ function PenalChargesSection() {
 function MicrofinanceLoansSection() {
   return (
     <section className="microfinance-section">
-      <div className="microfinance-content">
+      {/* <div className="microfinance-content">
         <div className="microfinance-title">FAIR PRACTICE CODE FOR MICROFINANCE LOANS</div>
         <div className="microfinance-subtitle">a. General</div>
         <ul className="microfinance-list">
@@ -529,28 +550,32 @@ function MicrofinanceLoansSection() {
           <li>Non-credit products issued shall be with full consent of the borrowers and fee structure shall be communicated in the loan card itself,</li>
           <li>All entries in the loan card shall be in the vernacular language or the language as understood by the borrower.</li>
         </ul>
-      </div>
+      </div> */}
+
+      <div className="microfinance-image-container">
+      <img src={"microfinance.png"} alt="Commitment handshake" />
+    </div>
     </section>
   );
 }
 
 function NonCoerciveRecoverySection() {
-  const items = [
-    {
-      color: "#ff9800",
-      icon: "https://img.icons8.com/ios-filled/40/ffffff/connection.png",
-      text: "Recovery shall typically occur at a central designated place. Field staff may only conduct recovery at the borrower's residence or workplace if the borrower misses the central location on two or more consecutive occasions."
-    },
-    {
-      color: "#29597d",
-      icon: "https://img.icons8.com/ios-filled/40/ffffff/share-2.png",
-      text: "The Company shall maintain a Board-approved policy governing employee conduct, recruitment, training, and monitoring. This policy will define minimum staff qualifications, provide necessary customer interaction training, include programs fostering appropriate behaviour towards borrowers, and integrate conduct into employee compensation structures"
-    }
-  ];
+  // const items = [
+  //   {
+  //     color: "#ff9800",
+  //     icon: "https://img.icons8.com/ios-filled/40/ffffff/connection.png",
+  //     text: "Recovery shall typically occur at a central designated place. Field staff may only conduct recovery at the borrower's residence or workplace if the borrower misses the central location on two or more consecutive occasions."
+  //   },
+  //   {
+  //     color: "#29597d",
+  //     icon: "https://img.icons8.com/ios-filled/40/ffffff/share-2.png",
+  //     text: "The Company shall maintain a Board-approved policy governing employee conduct, recruitment, training, and monitoring. This policy will define minimum staff qualifications, provide necessary customer interaction training, include programs fostering appropriate behaviour towards borrowers, and integrate conduct into employee compensation structures"
+  //   }
+  // ];
   return (
     <section className="noncoercive-section">
       <div className="noncoercive-title">Non-coercive methods of recovery</div>
-      <div className="noncoercive-cards">
+      {/* <div className="noncoercive-cards">
         {items.map((item, i) => (
           <div className="noncoercive-card" key={i}>
             <div className="noncoercive-ribbon" style={{background: item.color}}>
@@ -559,6 +584,17 @@ function NonCoerciveRecoverySection() {
             <div className="noncoercive-text">{item.text}</div>
           </div>
         ))}
+      </div> */}  
+      <div className="non-coercive-image-container">
+        <img src={"non coercive 1.png"} alt="non-coercive-image" className="non-coercive-image" />
+      </div>
+
+      <div className="non-coercive-image-container">
+        <img src={"non coercive 2.png"} alt="non-coercive-image" />
+      </div>
+
+      <div className="non-coercive-image2-container">
+        <img src={"responsibility_board.png"} alt="non-coercive-image" className="non-coercive2-image" />
       </div>
     </section>
   );
@@ -659,7 +695,8 @@ function MainContent() {
       </div>
       <div id="purpose"><PurposeSection /></div>
       <div id="definitions"><DefinitionsSection /></div>
-      <div id="key-commitments"><KeyCommitmentsSection /></div>
+      {/* <div id="key-commitments"><KeyCommitmentsSection /></div> */}
+       <div id="commit-image"><CommitImage /></div>
       <div id="fair-practice"><FairPracticeGuidelinesSection /></div>
       <div id="loan-appraisal"><LoanAppraisalSection /></div>
       <div id="loan-disbursement"><LoanDisbursementSection /></div>
