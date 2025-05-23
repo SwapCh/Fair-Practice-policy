@@ -149,7 +149,7 @@ function DefinitionsSection() {
         </div>
         <div className="definition-item">
           <span className="definition-num num3">03</span>
-          <span className="definition-text"><b>"Directors"</b> means individuals appointed to the Board of the Company.</span>
+          <span className="definition-text"><b>"Directors"</b> means individuals appointed to the Board of the company.</span>
         </div>
         <div className="definition-item">
           <span className="definition-num num4">04</span>
