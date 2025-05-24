@@ -196,7 +196,7 @@ function KeyCommitmentsSection() {
 function CommitImage() {
   return (
     <div className="commit-image-container">
-      <img src={"key_commitments.png"} alt="Commitment handshake" />
+      <img src={"./src/assets/key_commitments.png"} alt="Commitment handshake" />
     </div>
   );
 }
@@ -225,7 +225,7 @@ function FairPracticeGuidelinesSection() {
         </div> 
       </div> */}
        <div className="guidelines-image-container"> {/*"originally eta comit-image-container chilo" */}
-      <img src={"guidelines.png"} alt="Commitment handshake" className="guidelines-img" />
+      <img src={"./src/assets/guidelines.png"} alt="Commitment handshake" className="guidelines-img" />
       </div>
       
 
@@ -460,7 +460,7 @@ function RegulationOfInterestRatesSection() {
       </div>*/}
 
       <div className="regulation-image-container">
-      <img src={"8.png"} alt="Commitment handshake" />
+      <img src={"./src/assets/8.png"} alt="Commitment handshake" />
       </div>
     </section>
   );
@@ -553,7 +553,7 @@ function MicrofinanceLoansSection() {
       </div> */}
 
       <div className="microfinance-image-container">
-      <img src={"microfinance.png"} alt="Commitment handshake" />
+      <img src={"./src/assets/microfinance.png"} alt="Commitment handshake" />
     </div>
     </section>
   );
@@ -586,15 +586,15 @@ function NonCoerciveRecoverySection() {
         ))}
       </div> */}  
       <div className="non-coercive-image-container">
-        <img src={"non_coercive_1.png"} alt="non-coercive-image" className="non-coercive-image" />
+        <img src={"./src/assets/non_coercive_1.png"} alt="non-coercive-image" className="non-coercive-image" />
       </div>
 
       <div className="non-coercive-image-container">
-        <img src={"non_coercive_2.png"} alt="non-coercive-image" />
+        <img src={"./src/assets/non_coercive_2.png"} alt="non-coercive-image" />
       </div>
 
       <div className="non-coercive-image2-container">
-        <img src={"responsibility_board.png"} alt="non-coercive-image" className="non-coercive2-image" />
+        <img src={"./src/assets/responsibility_board.png"} alt="non-coercive-image" className="non-coercive2-image" />
       </div>
     </section>
   );
